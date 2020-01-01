@@ -7,6 +7,7 @@ import com.watabou.utils.Random;
 
 public class Roomless extends Mob {
     {
+        state = HUNTING;
         spriteClass = RoomlessSprite.class;
 
         HP = HT = 10;
