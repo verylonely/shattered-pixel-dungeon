@@ -122,7 +122,6 @@ public class Badges {
 		UNLOCK_MAGE( 65 ),
 		UNLOCK_ROGUE( 66 ),
 		UNLOCK_HUNTRESS( 67 ),
-		UNLOCK_GOD(65),
 		ITEM_LEVEL_1( 48 ),
 		ITEM_LEVEL_2( 49 ),
 		ITEM_LEVEL_3( 50 ),
