@@ -17,7 +17,7 @@ public class Roomless extends Mob {
         maxLvl = 7;
 
         loot = Generator.Category.FOOD;
-        lootChance = 0.16f;
+        lootChance = 0.36f;
 
     }
 
