@@ -19,7 +19,6 @@ public class Roomless extends Mob {
         loot = Generator.Category.FOOD;
         lootChance = 0.16f;
 
-        HUNTING = new Hunting();
     }
 
     @Override
