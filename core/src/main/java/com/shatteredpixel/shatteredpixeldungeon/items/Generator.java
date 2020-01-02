@@ -135,6 +135,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sai;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scimitar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Spear;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.StrongKunai;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Whip;
@@ -323,7 +324,8 @@ public class Generator {
 					WornShortsword.class,
 					Gloves.class,
 					Dagger.class,
-					MagesStaff.class
+					MagesStaff.class,
+					StrongKunai.class
 			};
 			WEP_T1.probs = new float[]{ 1, 1, 1, 0 };
 			
@@ -332,7 +334,8 @@ public class Generator {
 					HandAxe.class,
 					Spear.class,
 					Quarterstaff.class,
-					Dirk.class
+					Dirk.class,
+					StrongKunai.class
 			};
 			WEP_T2.probs = new float[]{ 6, 5, 5, 4, 4 };
 			
@@ -342,7 +345,7 @@ public class Generator {
 					Scimitar.class,
 					RoundShield.class,
 					Sai.class,
-					Whip.class
+					Whip.class,
 			};
 			WEP_T3.probs = new float[]{ 6, 5, 5, 4, 4, 4 };
 			
