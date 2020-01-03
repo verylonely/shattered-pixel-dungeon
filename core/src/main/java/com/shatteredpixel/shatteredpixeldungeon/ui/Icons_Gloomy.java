@@ -15,7 +15,7 @@ public enum Icons_Gloomy {
 
         switch (type){
             case GPD:
-                icon.frame( icon.texture.uvRect(0,0, 16, 16) );
+                icon.frame( icon.texture.uvRect(0,0, 11, 14) );
         }
 
         return icon;
