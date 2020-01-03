@@ -40,7 +40,8 @@ public class AboutScene extends PixelScene {
 	private static final String TTL_GPD = "Gloomy Pixel Dungeon";
 
 	private static final String TXT_GPD =
-			"Code: VeryLonely";
+			"Code: VeryLonely\n" +
+			"Design & Graphics: Yorkie-";
 
 	private static final String TTL_SHPX = "Shattered Pixel Dungeon";
 
