@@ -72,10 +72,22 @@ public class v0_7_X_Changes {
 		changes.hardlight( Window.GPD_COLOR );
 		changeInfos.add(changes);
 
+		changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+		changes.hardlight(Window.GPD_COLOR);
+		changeInfos.add(changes);
+
 		changes.addButton( new ChangeButton(new Image(Assets.ROOMLESS, 0, 0, 12,16), "Roomless",
 				"Homeless who will spawn on the first 5 levels") );
 		changes.addButton( new ChangeButton(new Image(Assets.ITEMS, 144, 144, 15, 15), "Strong Kunai",
 				"Added Strong Kunai as hand weapon") );
+
+		changes = new ChangeInfo(Messages.get(ChangesScene.class, "bugfixes"), false, null);
+		changes.hardlight(Window.GPD_COLOR);
+		changeInfos.add(changes);
+
+		changes.addButton( new ChangeButton(new Image(Assets.SNAKE, 0, 0, 12, 16), "Snake defense skill",
+				"Reduced defense level") );
+
 	}
 	
 	public static void add_v0_7_5_Changes( ArrayList<ChangeInfo> changeInfos ){
