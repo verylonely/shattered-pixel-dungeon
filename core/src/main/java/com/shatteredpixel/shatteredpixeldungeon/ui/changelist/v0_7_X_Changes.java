@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.ui.changelist;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Roomless;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BadgeBanner;
 import com.shatteredpixel.shatteredpixeldungeon.items.Honeypot;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
@@ -41,6 +42,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfRegrowth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.StrongKunai;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Shuriken;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Tomahawk;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.darts.Dart;
@@ -76,9 +78,9 @@ public class v0_7_X_Changes {
 		changes.hardlight(Window.GPD_COLOR);
 		changeInfos.add(changes);
 
-		changes.addButton( new ChangeButton(new Image(Assets.ROOMLESS, 0, 0, 12,16), "Roomless",
+		changes.addButton( new ChangeButton(new Image(Assets.ROOMLESS, 0, 0, 12,16), Messages.get(Roomless.class, "name"),
 				"Homeless who will spawn on the first 5 levels") );
-		changes.addButton( new ChangeButton(new Image(Assets.ITEMS, 144, 144, 15, 15), "Strong Kunai",
+		changes.addButton( new ChangeButton(new Image(Assets.ITEMS, 144, 144, 15, 15), Messages.get(StrongKunai.class, "name"),
 				"Added Strong Kunai as hand weapon") );
 
 		changes = new ChangeInfo(Messages.get(ChangesScene.class, "bugfixes"), false, null);
