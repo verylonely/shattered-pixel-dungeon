@@ -58,12 +58,24 @@ import java.util.ArrayList;
 public class v0_7_X_Changes {
 	
 	public static void addAllChanges( ArrayList<ChangeInfo> changeInfos ){
+		add_v0_7_7_8_b_Changes(changeInfos);
 		add_v0_7_5_Changes(changeInfos);
 		add_v0_7_4_Changes(changeInfos);
 		add_v0_7_3_Changes(changeInfos);
 		add_v0_7_2_Changes(changeInfos);
 		add_v0_7_1_Changes(changeInfos);
 		add_v0_7_0_Changes(changeInfos);
+	}
+
+	public static void add_v0_7_7_8_b_Changes( ArrayList<ChangeInfo> changeInfos ){
+		ChangeInfo changes = new ChangeInfo("v0.7.7-0.7.8d", true, "");
+		changes.hardlight( Window.GPD_COLOR );
+		changeInfos.add(changes);
+
+		changes.addButton( new ChangeButton(new Image(Assets.ROOMLESS, 0, 0, 12,16), "Roomless",
+				"Homeless who will spawn on the first 5 levels") );
+		changes.addButton( new ChangeButton(new Image(Assets.ITEMS, 144, 144, 15, 15), "Strong Kunai",
+				"Added Strong Kunai as hand weapon") );
 	}
 	
 	public static void add_v0_7_5_Changes( ArrayList<ChangeInfo> changeInfos ){
