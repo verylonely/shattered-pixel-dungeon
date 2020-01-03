@@ -37,6 +37,10 @@ import com.watabou.utils.DeviceCompat;
 
 public class AboutScene extends PixelScene {
 
+	private static final String TTL_GPD = "Gloomy Pixel Dungeon";
+
+	private static final String TXT_GPD = "Code: Very_Lonely";
+
 	private static final String TTL_SHPX = "Shattered Pixel Dungeon";
 
 	private static final String TXT_SHPX =
@@ -59,6 +63,8 @@ public class AboutScene extends PixelScene {
 		final float colWidth = Camera.main.width / (SPDSettings.landscape() ? 2 : 1);
 		final float colTop = (Camera.main.height / 2) - (SPDSettings.landscape() ? 30 : 90);
 		final float wataOffset = SPDSettings.landscape() ? colWidth : 0;
+
+		//------------------------------------------------------------------------------------------
 
 		Image shpx = Icons.SHPX.get();
 		shpx.x = (colWidth - shpx.width()) / 2;
@@ -100,6 +106,8 @@ public class AboutScene extends PixelScene {
 			}
 		};
 		add( shpxhotArea );
+
+		//------------------------------------------------------------------------------------------
 
 		Image wata = Icons.WATA.get();
 		wata.x = wataOffset + (colWidth - wata.width()) / 2;
