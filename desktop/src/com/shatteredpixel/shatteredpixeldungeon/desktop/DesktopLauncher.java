@@ -53,7 +53,7 @@ public class DesktopLauncher {
 		
 		config.width = 1920;
 		config.height = 1080;
-		
+
 		//uncapped (but vsynced) framerate when focused, paused when not focused
 		config.foregroundFPS = 0;
 		config.backgroundFPS = -1;
