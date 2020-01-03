@@ -62,18 +62,18 @@ public class DesktopLauncher {
 		// it would be nice to be able to fetch them from gradle in some way
 		config.title = DesktopLauncher.class.getPackage().getSpecificationTitle();
 		if (config.title == null) {
-			config.title = "ShatteredPD INDEV";
+			config.title = "GloomyPD INDEV";
 		}
 		
 		Game.version = DesktopLauncher.class.getPackage().getSpecificationVersion();
 		if (Game.version == null) {
-			Game.version = "0.7.5e-INDEV";
+			Game.version = "0.7.8c-INDEV";
 		}
 		
 		try {
 			Game.versionCode = Integer.parseInt(DesktopLauncher.class.getPackage().getImplementationVersion());
 		} catch (NumberFormatException e) {
-			Game.versionCode = 382;
+			Game.versionCode = 386;
 		}
 		
 		new LwjglApplication(new ShatteredPixelDungeon(new DesktopPlatformSupport()), config);
