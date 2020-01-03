@@ -67,6 +67,7 @@ public enum Icons {
 	BADGES,
 	CHANGES,
 	SHPX,
+	GPD,
 	
 	//misc icons
 	LIBGDX,
@@ -178,6 +179,9 @@ public enum Icons {
 			break;
 		case SHPX:
 			icon.frame( icon.texture.uvRect( 68, 64, 84, 80 ) );
+			break;
+		case GPD:
+			icon.frame( icon.texture.uvRect(102,64,120, 80) );
 			break;
 		case GOLD:
 			icon.frame( icon.texture.uvRect( 85, 64, 102, 80 ) );

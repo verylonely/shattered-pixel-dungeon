@@ -39,7 +39,8 @@ public class AboutScene extends PixelScene {
 
 	private static final String TTL_GPD = "Gloomy Pixel Dungeon";
 
-	private static final String TXT_GPD = "Code: Very_Lonely";
+	private static final String TXT_GPD =
+			"Code: VeryLonely";
 
 	private static final String TTL_SHPX = "Shattered Pixel Dungeon";
 
@@ -62,13 +63,42 @@ public class AboutScene extends PixelScene {
 
 		final float colWidth = Camera.main.width / (SPDSettings.landscape() ? 2 : 1);
 		final float colTop = (Camera.main.height / 2) - (SPDSettings.landscape() ? 30 : 90);
+		final float shpdOffset = SPDSettings.landscape() ? colWidth : 0;
 		final float wataOffset = SPDSettings.landscape() ? colWidth : 0;
+		//------------------------------------------------------------------------------------------
+
+		Image gpd = Icons.GPD.get();
+		gpd.x = (colWidth - gpd.width()) / 2;
+		gpd.y = colTop - 17;
+		align(gpd);
+		add( gpd );
+
+		new Flare( 7, 64 ).color( 0xff1800, true ).show( gpd,0 ).angularSpeed = +20;
+
+		RenderedTextBlock gpdtitle = renderTextBlock(TTL_GPD, 8);
+		gpdtitle.hardlight( Window.GPD_COLOR );
+		add( gpdtitle );
+
+		gpdtitle.setPos(
+				(colWidth - gpdtitle.width()) / 2,
+				gpd.y + gpd.height + 5
+		);
+		align(gpdtitle);
+
+		RenderedTextBlock gpdtext = renderTextBlock( TXT_GPD, 8);
+		gpdtext.maxWidth((int)Math.min(colWidth, 120));
+		add( gpdtext );
+		gpdtext.setPos((colWidth - gpdtext.width()) / 2, gpdtitle.bottom() + 12);
+		align(gpdtext);
+
 
 		//------------------------------------------------------------------------------------------
 
 		Image shpx = Icons.SHPX.get();
-		shpx.x = (colWidth - shpx.width()) / 2;
-		shpx.y = colTop;
+		shpx.x = shpdOffset + (colWidth - shpx.width()) / 2;
+		shpx.y = SPDSettings.landscape() ?
+				colTop:
+				gpdtext.top() + shpx.height + 20;
 		align(shpx);
 		add( shpx );
 
