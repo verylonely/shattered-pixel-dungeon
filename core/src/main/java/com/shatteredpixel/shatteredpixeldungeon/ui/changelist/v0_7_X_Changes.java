@@ -58,7 +58,7 @@ import java.util.ArrayList;
 public class v0_7_X_Changes {
 	
 	public static void addAllChanges( ArrayList<ChangeInfo> changeInfos ){
-		add_v0_7_7_8_Changes(changeInfos);
+		add_v0_7_7__7_7_8_Changes(changeInfos);
 		add_v0_7_5_Changes(changeInfos);
 		add_v0_7_4_Changes(changeInfos);
 		add_v0_7_3_Changes(changeInfos);
@@ -67,7 +67,7 @@ public class v0_7_X_Changes {
 		add_v0_7_0_Changes(changeInfos);
 	}
 
-	public static void add_v0_7_7_8_Changes( ArrayList<ChangeInfo> changeInfos ){
+	public static void add_v0_7_7__7_7_8_Changes( ArrayList<ChangeInfo> changeInfos ){
 		ChangeInfo changes = new ChangeInfo("v0.7.7-0.7.8", true, "");
 		changes.hardlight( Window.GPD_COLOR );
 		changeInfos.add(changes);
