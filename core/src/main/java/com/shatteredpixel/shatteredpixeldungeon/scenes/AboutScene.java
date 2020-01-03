@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Archs;
 import com.shatteredpixel.shatteredpixeldungeon.ui.ExitButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Icons;
+import com.shatteredpixel.shatteredpixeldungeon.ui.Icons_Gloomy;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RenderedTextBlock;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
 import com.watabou.input.PointerEvent;
@@ -68,7 +69,7 @@ public class AboutScene extends PixelScene {
 		final float wataOffset = SPDSettings.landscape() ? colWidth : 0;
 		//------------------------------------------------------------------------------------------
 
-		Image gpd = Icons.GPD.get();
+		Image gpd = Icons_Gloomy.GPD.get();
 		gpd.x = (colWidth - gpd.width()) / 2;
 		gpd.y = colTop - 17;
 		align(gpd);

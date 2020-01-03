@@ -186,7 +186,6 @@ public enum Icons {
 		case GOLD:
 			icon.frame( icon.texture.uvRect( 85, 64, 102, 80 ) );
 			break;
-		
 		case LIBGDX:
 			icon.frame( icon.texture.uvRect( 0, 81, 16, 94 ) );
 			break;
