@@ -67,13 +67,13 @@ public class DesktopLauncher {
 		
 		Game.version = DesktopLauncher.class.getPackage().getSpecificationVersion();
 		if (Game.version == null) {
-			Game.version = "0.7.8c-INDEV";
+			Game.version = "0.7.8d-INDEV";
 		}
 		
 		try {
 			Game.versionCode = Integer.parseInt(DesktopLauncher.class.getPackage().getImplementationVersion());
 		} catch (NumberFormatException e) {
-			Game.versionCode = 386;
+			Game.versionCode = 387;
 		}
 		
 		new LwjglApplication(new ShatteredPixelDungeon(new DesktopPlatformSupport()), config);
