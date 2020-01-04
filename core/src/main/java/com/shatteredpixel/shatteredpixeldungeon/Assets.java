@@ -48,7 +48,7 @@ public class Assets {
 	public static final String MAGE		= "mage.png";
 	public static final String ROGUE	= "rogue.png";
 	public static final String HUNTRESS	= "huntress.png";
-	public static final String AVATARS	= "avatars_gloomy.png";
+	public static final String AVATARS	= "avatars.png";
 	public static final String PET		= "pet.png";
 	
 	public static final String SURFACE	= "surface.png";
