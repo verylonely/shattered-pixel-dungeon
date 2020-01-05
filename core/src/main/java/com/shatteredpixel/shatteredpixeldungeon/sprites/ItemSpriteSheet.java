@@ -670,6 +670,14 @@ public class ItemSpriteSheet {
 		assignItemRect(HOLSTER,     15, 16);
 	}
 
+	//GLOOMY ITEMS----------------------------------------------------------------------------------
+
+	private static final int GLOOMY_WEAPON = 								xy(1,34);
+	public static final int CHOPPER 	= GLOOMY_WEAPON+0;
+	static {
+		assignItemRect(CHOPPER, 	16,16);
+	}
+
 	                                                                                    //16 free slots
 
 
