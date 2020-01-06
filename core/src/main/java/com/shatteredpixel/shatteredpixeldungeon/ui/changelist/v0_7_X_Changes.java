@@ -74,6 +74,13 @@ public class v0_7_X_Changes {
 		changes.hardlight( Window.GPD_COLOR );
 		changeInfos.add(changes);
 
+		changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+		changes.hardlight(Window.GPD_COLOR);
+		changeInfos.add(changes);
+
+		changes.addButton( new ChangeButton( new Image(Assets.ICONS_GLOOMY, 0,0, 16, 16), "Dungeons!",
+				"Dungeon sizes increased to 25 rooms") );
+
 		changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
 		changes.hardlight(Window.GPD_COLOR);
 		changeInfos.add(changes);
