@@ -14,8 +14,8 @@ allprojects {
         appName = 'Gloomy Pixel Dungeon'
         appPackageName = 'art.verylonely.gloomypixeldungeon'
 
-        appVersionCode = 390
-        appVersionName = '0.7.8-final'
+        appVersionCode = 391
+        appVersionName = '0.8'
 
         appAndroidCompileSDK = 29
         appAndroidMinSDK = 9
