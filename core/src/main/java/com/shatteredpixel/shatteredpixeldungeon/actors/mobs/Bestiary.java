@@ -44,6 +44,7 @@ public class Bestiary {
 			case 1: default:
 				//3x rat, 1x snake
 				return new ArrayList<>(Arrays.asList(
+						Wanderer.class,
 						Rat.class, Rat.class, Rat.class,
 						Snake.class, Roomless.class));
 			case 2:
