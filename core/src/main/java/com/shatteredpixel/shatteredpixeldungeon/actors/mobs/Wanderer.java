@@ -12,7 +12,7 @@ public class Wanderer extends Mob {
         HP = HT = 10;
 
 
-        loot = Generator.Category.MIS_T1;
+        loot = Generator.Category.WEP_T1;
         lootChance = 0.25f;
 
         maxLvl = 5;
