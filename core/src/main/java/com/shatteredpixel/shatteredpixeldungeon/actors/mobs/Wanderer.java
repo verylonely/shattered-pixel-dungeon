@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
@@ -10,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.WandererSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class Wanderer extends Mob {
@@ -62,7 +64,7 @@ public class Wanderer extends Mob {
         super.die( cause );
     }
 
-    private int dice = Random.NormalIntRange(1, 10);
+    private int dice = 10;
 
     public void makeGhost(int pos){
         if(dice == 10){
@@ -71,6 +73,7 @@ public class Wanderer extends Mob {
             ghost.pos = summoningPos;
             Dungeon.level.occupyCell(ghost);
             GameScene.add(ghost);
+            Sample.INSTANCE.play(Assets.SND_WANDERER_GHOST);
         }
     }
 

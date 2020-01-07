@@ -195,4 +195,5 @@ public class Assets {
 	public static final String SND_DEGRADE  		= "snd_degrade.mp3";
 	public static final String SND_MIMIC    		= "snd_mimic.mp3";
 	public static final String SND_ROOMLESS_DIES 	= "snd_roomless_dies.ogg";
+	public static final String SND_WANDERER_GHOST 	= "snd_wanderer_ghost.ogg";
 }
