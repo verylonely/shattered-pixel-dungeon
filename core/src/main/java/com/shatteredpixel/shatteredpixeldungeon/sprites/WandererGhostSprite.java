@@ -15,16 +15,16 @@ public class WandererGhostSprite extends MobSprite {
         TextureFilm frames = new TextureFilm(texture, 16, 16);
 
         idle = new Animation(3, true);
-        idle.frames( frames, 25, 26, 27, 26, 25 );
+        idle.frames( frames, 24, 25, 26, 26, 25 );
 
         run = new MovieClip.Animation(12, true);
-        run.frames( frames, 29, 30 );
+        run.frames( frames, 28, 29 );
 
         attack = new MovieClip.Animation(8, false);
-        attack.frames( frames, 33, 34, 35, 36, 35, 34, 33 );
+        attack.frames( frames, 32, 33, 34, 35, 34, 33, 32 );
 
         die = new MovieClip.Animation(3, false);
-        die.frames( frames, 38, 39, 40, 41 );
+        die.frames( frames, 37, 38, 39, 40 );
 
         play(idle);
 
