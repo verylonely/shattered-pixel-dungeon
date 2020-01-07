@@ -14,13 +14,13 @@ public class v0_8_X_Changes {
 
     public static void addAllChanges( ArrayList<ChangeInfo> changeInfos ){
 
-        add_v_0_8_0(changeInfos);
+        add_v_0_8(changeInfos);
 
     }
 
-    public static void add_v_0_8_0( ArrayList<ChangeInfo> changeInfos ){
+    public static void add_v_0_8( ArrayList<ChangeInfo> changeInfos ){
 
-        ChangeInfo changes = new ChangeInfo("v0.8.0", true, "");
+        ChangeInfo changes = new ChangeInfo("v0.8", true, "");
         changes.hardlight(Window.GPD_COLOR);
         changeInfos.add(changes);
 
