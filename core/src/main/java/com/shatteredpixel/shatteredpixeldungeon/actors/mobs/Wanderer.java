@@ -15,6 +15,7 @@ import com.watabou.utils.Random;
 public class Wanderer extends Mob {
 
     {
+        alignment = Alignment.NEUTRAL;
         spriteClass = WandererSprite.class;
         HP = HT = 10;
 
@@ -58,7 +59,6 @@ public class Wanderer extends Mob {
         }
 
         makeGhost(pos);
-
         super.die( cause );
     }
 

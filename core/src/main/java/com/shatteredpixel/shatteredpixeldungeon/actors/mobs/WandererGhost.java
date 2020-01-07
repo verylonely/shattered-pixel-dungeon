@@ -10,7 +10,7 @@ public class WandererGhost extends Mob {
     {
         spriteClass = WandererGhostSprite.class;
 
-        HP = HT = 15;
+        HP = HT = 40;
 
         defenseSkill = 5;
         EXP = 10;
@@ -24,12 +24,12 @@ public class WandererGhost extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 2, 6 );
+        return Random.NormalIntRange( 3, 6 );
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 8;
+        return 10;
     }
 
 }

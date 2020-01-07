@@ -509,6 +509,8 @@ public abstract class Mob extends Char {
 		
 		if (enemy instanceof Hero && ((Hero) enemy).belongings.weapon instanceof MissileWeapon){
 			hitWithRanged = true;
+
+			if(alignment == Alignment.NEUTRAL) { alignment = Alignment.ENEMY; }
 		}
 		
 		if ((!enemySeen || enemy.invisible > 0)
