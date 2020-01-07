@@ -52,7 +52,8 @@ public class Bestiary {
 				return new ArrayList<>(Arrays.asList(Rat.class, Rat.class,
 						Snake.class,
 						Gnoll.class, Gnoll.class,
-						Roomless.class));
+						Roomless.class,
+						Wanderer.class, Wanderer.class));
 			case 3:
 				//1x rat, 1x snake, 3x gnoll, 1x swarm, 1x crab
 				return new ArrayList<>(Arrays.asList(Rat.class,
@@ -60,7 +61,8 @@ public class Bestiary {
 						Gnoll.class, Gnoll.class, Gnoll.class,
 						Swarm.class,
 						Crab.class,
-						Roomless.class));
+						Roomless.class,
+						Wanderer.class, Wanderer.class));
 			case 4: case 5:
 				//1x gnoll, 1x swarm, 2x crab, 2x slime
 				return new ArrayList<>(Arrays.asList(Gnoll.class,
