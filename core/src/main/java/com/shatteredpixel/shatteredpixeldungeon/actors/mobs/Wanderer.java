@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.WandererSprite;
 import com.watabou.utils.Random;
@@ -20,5 +21,8 @@ public class Wanderer extends Mob {
     @Override
     public int damageRoll() { return Random.NormalIntRange(1, 3);
     }
+
+    @Override
+    public int attackSkill(Char target) { return 7; }
 
 }
