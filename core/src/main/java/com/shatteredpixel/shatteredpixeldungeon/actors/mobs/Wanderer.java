@@ -64,7 +64,7 @@ public class Wanderer extends Mob {
         super.die( cause );
     }
 
-    private int dice = 10;
+    private int dice = Random.NormalIntRange(1, 10);
 
     public void makeGhost(int pos){
         if(dice == 10){
