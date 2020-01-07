@@ -18,13 +18,13 @@ public class WandererSprite extends MobSprite {
         idle.frames(frames, 0, 1, 2, 1, 0, 3);
 
         run = new MovieClip.Animation(15, true);
-        run.frames(frames, 4, 5);
+        run.frames(frames, 4, 5, 6, 5 ,4);
 
         attack = new MovieClip.Animation(12, false);
         attack.frames(frames, 9, 8, 9);
 
-        die = new MovieClip.Animation(5, false);
-        die.frames(frames, 10, 11, 12);
+        die = new MovieClip.Animation(2, false);
+        die.frames(frames, 10, 11, 12, 13, 14);
 
         play(idle);
     }
