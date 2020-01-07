@@ -69,7 +69,7 @@ public class HallsLevel extends RegularLevel {
 	
 	@Override
 	protected int specialRooms() {
-		return 10 + Random.chances(new float[]{1, 1});
+		return 4 + Random.chances(new float[]{1, 1});
 	}
 	
 	@Override
