@@ -63,7 +63,7 @@ public class CityLevel extends RegularLevel {
 	
 	@Override
 	protected int specialRooms() {
-		return 4 + Random.chances(new float[]{2, 1});
+		return 2 + Random.chances(new float[]{2, 1});
 	}
 	
 	@Override
