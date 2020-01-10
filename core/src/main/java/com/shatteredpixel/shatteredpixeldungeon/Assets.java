@@ -105,6 +105,7 @@ public class Assets {
 	public static final String SNAKE	= "snake.png";
 	public static final String NECRO	= "necromancer.png";
 	public static final String WANDERER = "wanderer.png";
+	public static final String ZOMBIE 	= "zombie.png";
 
 	public static final String ITEMS	        = "items_gloomy.png";
 	public static final String ITEMS_GLOOMY 	= "items_gloomy.png";
@@ -196,4 +197,5 @@ public class Assets {
 	public static final String SND_MIMIC    		= "snd_mimic.mp3";
 	public static final String SND_ROOMLESS_DIES 	= "snd_roomless_dies.ogg";
 	public static final String SND_WANDERER_GHOST 	= "snd_wanderer_ghost.ogg";
+	public static final String SND_ZOMBIE_VOICE 	= "snd_zombie_voice.ogg";
 }

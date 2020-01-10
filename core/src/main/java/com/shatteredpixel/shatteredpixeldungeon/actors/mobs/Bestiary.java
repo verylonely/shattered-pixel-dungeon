@@ -57,6 +57,7 @@ public class Bestiary {
 			case 3:
 				//1x rat, 1x snake, 3x gnoll, 1x swarm, 1x crab
 				return new ArrayList<>(Arrays.asList(Rat.class,
+						Zombie.class, Zombie.class,
 						Snake.class,
 						Gnoll.class, Gnoll.class, Gnoll.class,
 						Swarm.class,
@@ -66,6 +67,7 @@ public class Bestiary {
 			case 4: case 5:
 				//1x gnoll, 1x swarm, 2x crab, 2x slime
 				return new ArrayList<>(Arrays.asList(Gnoll.class,
+						Zombie.class, Zombie.class,
 						Swarm.class,
 						Crab.class, Crab.class,
 						Slime.class, Slime.class,
@@ -87,6 +89,7 @@ public class Bestiary {
 				//2x skeleton, 1x thief, 2x shaman, 2x guard, 1x necromancer
 				return new ArrayList<>(Arrays.asList(Skeleton.class, Skeleton.class,
 						Thief.class,
+						Zombie.class,
 						Shaman.class, Shaman.class,
 						Guard.class, Guard.class,
 						Necromancer.class));
