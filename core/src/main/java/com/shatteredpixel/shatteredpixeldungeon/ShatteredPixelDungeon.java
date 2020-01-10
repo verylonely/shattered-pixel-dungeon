@@ -172,7 +172,8 @@ public class ShatteredPixelDungeon extends Game {
 				Assets.SND_DEGRADE,
 				Assets.SND_MIMIC,
 				Assets.SND_ROOMLESS_DIES,
-				Assets.SND_WANDERER_GHOST);
+				Assets.SND_WANDERER_GHOST,
+				Assets.SND_ZOMBIE_VOICE);
 
 		
 	}
