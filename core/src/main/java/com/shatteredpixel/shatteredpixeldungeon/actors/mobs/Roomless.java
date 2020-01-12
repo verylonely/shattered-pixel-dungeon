@@ -20,7 +20,6 @@ public class Roomless extends Mob {
         HP = HT = 10;
         defenseSkill = 4;
 
-        EXP = 1;
         maxLvl = 7;
 
         loot = Generator.Category.FOOD;
