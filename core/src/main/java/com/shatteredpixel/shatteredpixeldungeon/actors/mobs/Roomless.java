@@ -26,6 +26,11 @@ public class Roomless extends Mob {
         lootChance = 0.36f;
 
     }
+    public Roomless(){
+        super();
+        HP = HT = 10 + Dungeon.depth * 3;
+        defenseSkill = 4 + Dungeon.depth * 2;
+    }
 
     @Override
     public int damageRoll() {
