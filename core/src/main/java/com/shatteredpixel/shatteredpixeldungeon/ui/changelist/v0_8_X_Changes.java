@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.ui.changelist;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Roomless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Wanderer;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Zombie;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Chopper;
@@ -42,6 +43,14 @@ public class v0_8_X_Changes {
         changes.addButton( new ChangeButton( new Image(Assets.ICONS_GLOOMY,
                 0, 0, 16, 16), "Banners update",
                 "With this release, new banner textures are also coming."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(Window.GPD_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton( new ChangeButton( new Image( Assets.ROOMLESS,
+                0, 0, 12, 16), Messages.get(Roomless.class, "name"),
+                "Parameters Depend on Depth(Attack Skill, Defense Skill") );
     }
 
     public static void add_v_0_8( ArrayList<ChangeInfo> changeInfos ){
