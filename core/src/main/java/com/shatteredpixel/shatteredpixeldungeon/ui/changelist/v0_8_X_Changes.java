@@ -50,7 +50,7 @@ public class v0_8_X_Changes {
 
         changes.addButton( new ChangeButton( new Image( Assets.ROOMLESS,
                 0, 0, 12, 16), Messages.get(Roomless.class, "name"),
-                "Parameters Depend on Depth(Attack Skill, Defense Skill") );
+                "Parameters Depend on Depth (Attack Skill, Defense Skill)") );
     }
 
     public static void add_v_0_8( ArrayList<ChangeInfo> changeInfos ){
