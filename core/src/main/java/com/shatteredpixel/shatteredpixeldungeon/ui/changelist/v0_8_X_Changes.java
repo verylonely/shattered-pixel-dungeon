@@ -51,6 +51,13 @@ public class v0_8_X_Changes {
         changes.addButton( new ChangeButton( new Image( Assets.ROOMLESS,
                 0, 0, 12, 16), Messages.get(Roomless.class, "name"),
                 "Parameters Depend on Depth (Attack Skill, Defense Skill)") );
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "bugfixes"), false, null);
+        changes.hardlight(Window.GPD_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton( new ChangeButton( new Image( Assets.ICONS,
+                0, 64, 16, 16), "Rooms generator", "Room Number Generator Update" ));
     }
 
     public static void add_v_0_8( ArrayList<ChangeInfo> changeInfos ){
