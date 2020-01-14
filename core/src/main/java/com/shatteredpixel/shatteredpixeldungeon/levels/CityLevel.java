@@ -58,12 +58,12 @@ public class CityLevel extends RegularLevel {
 	
 	@Override
 	protected int standardRooms() {
-		return 20+Random.chances(new float[]{4, 3, 2, 1});
+		return 20+Random.NormalIntRange(1, 5);
 	}
 	
 	@Override
 	protected int specialRooms() {
-		return 2 + Random.chances(new float[]{2, 1});
+		return 2+Random.NormalIntRange(1, 4);
 	}
 	
 	@Override

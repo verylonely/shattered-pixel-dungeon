@@ -64,12 +64,12 @@ public class HallsLevel extends RegularLevel {
 	
 	@Override
 	protected int standardRooms() {
-		return 20+Random.chances(new float[]{3, 2, 1});
+		return 20+Random.NormalIntRange(1, 5);
 	}
 	
 	@Override
 	protected int specialRooms() {
-		return 4 + Random.chances(new float[]{1, 1});
+		return 4+Random.NormalIntRange(1, 3);
 	}
 	
 	@Override
