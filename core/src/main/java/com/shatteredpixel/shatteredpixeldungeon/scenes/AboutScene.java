@@ -47,6 +47,8 @@ public class AboutScene extends PixelScene {
 			"Code & Graphics: VeryLonely\n" +
 			"Design & Graphics: Yorkie-";
 
+	private static final String FORKED	= "Based on:";
+
 	private static final String TTL_SHPX = "Shattered Pixel Dungeon";
 
 	private static final String TXT_SHPX =
@@ -68,17 +70,16 @@ public class AboutScene extends PixelScene {
 
 		final float colWidth = Camera.main.width / (SPDSettings.landscape() ? 2 : 1);
 		final float colTop = (Camera.main.height / 2) - (SPDSettings.landscape() ? 30 : 90);
-		final float shpdOffset = SPDSettings.landscape() ? colWidth : 0;
-		final float wataOffset = SPDSettings.landscape() ? colWidth : 0;
+
 		//------------------------------------------------------------------------------------------
 
 		Image gpd = Icons_Gloomy.GPD.get();
 		gpd.x = (colWidth - gpd.width()) / 2;
-		gpd.y = colTop - 17;
+		gpd.y = colTop;
 		align(gpd);
 		add( gpd );
 
-		new Flare( 7, 64 ).color( 0xff1800, true ).show( gpd,0 ).angularSpeed = +20;
+
 
 		RenderedTextBlock gpdtitle = renderTextBlock(TTL_GPD, 8);
 		gpdtitle.hardlight( Window.GPD_COLOR );
@@ -88,111 +89,103 @@ public class AboutScene extends PixelScene {
 				(colWidth - gpdtitle.width()) / 2,
 				gpd.y + gpd.height + 5
 		);
+
+			if(SPDSettings.landscape()){
+				gpd.x = colWidth - gpd.width() + (gpd.width() / 2);
+				gpd.y = colTop / 2;
+				gpdtitle.setPos(
+						(colWidth - gpdtitle.width()) + (gpdtitle.width() / 2),
+						gpd.y + gpd.height + 5
+				);
+			}
+
 		align(gpdtitle);
 
 		RenderedTextBlock gpdtext = renderTextBlock( TXT_GPD, 8);
 		gpdtext.maxWidth((int)Math.min(colWidth, 120));
 		add( gpdtext );
 		gpdtext.setPos((colWidth - gpdtext.width()) / 2, gpdtitle.bottom() + 12);
+
+
+			if(SPDSettings.landscape()){
+				gpdtext.setPos(
+						(colWidth - gpdtext.width()) + (gpdtext.width() / 2),
+						gpdtitle.bottom() + 12
+				);
+			}
+
 		align(gpdtext);
+		new Flare( 7, 64 ).color( 0xff1800, true ).show( gpd,0 ).angularSpeed = +20;
+
+		RenderedTextBlock forked 	= renderTextBlock(FORKED, 8);
+		RenderedTextBlock shpxtitle = renderTextBlock(TTL_SHPX, 8);
+		RenderedTextBlock watatitle	= renderTextBlock(TTL_WATA, 8);
+
+		add( forked );
+		forked.setPos(
+				(colWidth - forked.width()) / 2,
+				gpdtext.bottom() + (colTop / 1.5f)
+		);
+
+		if(SPDSettings.landscape())
+		{
+			forked.setPos(
+					(colWidth - forked.width()) + (forked.width() / 2),
+					gpdtext.bottom() + 12
+			);
+		}
 
 
-		//------------------------------------------------------------------------------------------
+		align( forked );
 
-		Image shpx = Icons.SHPX.get();
-		shpx.x = shpdOffset + (colWidth - shpx.width()) / 2;
-		shpx.y = SPDSettings.landscape() ?
-				colTop:
-				gpdtext.top() + shpx.height + 20;
-		align(shpx);
-		add( shpx );
-
-		new Flare( 7, 64 ).color( 0x225511, true ).show( shpx, 0 ).angularSpeed = +20;
-
-		RenderedTextBlock shpxtitle = renderTextBlock( TTL_SHPX, 8 );
-		shpxtitle.hardlight( Window.SHPX_COLOR );
 		add( shpxtitle );
 
 		shpxtitle.setPos(
 				(colWidth - shpxtitle.width()) / 2,
-				shpx.y + shpx.height + 5
+				forked.bottom() + 12
 		);
-		align(shpxtitle);
 
-		RenderedTextBlock shpxtext = renderTextBlock( TXT_SHPX, 8 );
-		shpxtext.maxWidth((int)Math.min(colWidth, 120));
-		add( shpxtext );
-
-		shpxtext.setPos((colWidth - shpxtext.width()) / 2, shpxtitle.bottom() + 12);
-		align(shpxtext);
-
-		RenderedTextBlock shpxlink = renderTextBlock( LNK_SHPX, 8 );
-		shpxlink.maxWidth(shpxtext.maxWidth());
-		shpxlink.hardlight( Window.SHPX_COLOR );
-		add( shpxlink );
-
-		shpxlink.setPos((colWidth - shpxlink.width()) / 2, shpxtext.bottom() + 6);
-		align(shpxlink);
-
-		PointerArea shpxhotArea = new PointerArea( shpxlink.left(), shpxlink.top(), shpxlink.width(), shpxlink.height() ) {
-			@Override
-			protected void onClick( PointerEvent event ) {
-				DeviceCompat.openURI( "https://" + LNK_SHPX );
+			if(SPDSettings.landscape())
+			{
+				shpxtitle.setPos(
+						(colWidth - shpxtitle.width() + (shpxtitle.width() / 2)) - (colWidth / 4),
+						forked.bottom() + 12
+				);
 			}
-		};
-		add( shpxhotArea );
+
+		shpxtitle.hardlight(Window.SHPX_COLOR);
+
+		align( shpxtitle );
+
+		add( watatitle );
+
+		watatitle.setPos(
+				(colWidth - watatitle.width()) / 2,
+				shpxtitle.bottom() + 7
+		);
+
+			if(SPDSettings.landscape())
+			{
+				watatitle.setPos(
+						(colWidth - watatitle.width() + (watatitle.width() / 2)) + (colWidth / 4),
+						forked.bottom() + 12
+				);
+			}
+
+		watatitle.hardlight(Window.TITLE_COLOR);
+
+		align( watatitle );
+
+
 
 		//------------------------------------------------------------------------------------------
 
-		Image wata = Icons.WATA.get();
-		wata.x = wataOffset + (colWidth - wata.width()) / 2;
-		wata.y = SPDSettings.landscape() ?
-						colTop:
-						shpxlink.top() + wata.height + 20;
-		align(wata);
-		add( wata );
 
-		new Flare( 7, 64 ).color( 0x112233, true ).show( wata, 0 ).angularSpeed = +20;
-
-		RenderedTextBlock wataTitle = renderTextBlock( TTL_WATA, 8 );
-		wataTitle.hardlight(Window.TITLE_COLOR);
-		add( wataTitle );
-
-		wataTitle.setPos(
-				wataOffset + (colWidth - wataTitle.width()) / 2,
-				wata.y + wata.height + 11
-		);
-		align(wataTitle);
-
-		RenderedTextBlock wataText = renderTextBlock( TXT_WATA, 8 );
-		wataText.maxWidth((int)Math.min(colWidth, 120));
-		wataText.setHightlighting(false); //underscore in cube_code
-		add( wataText );
-
-		wataText.setPos(wataOffset + (colWidth - wataText.width()) / 2, wataTitle.bottom() + 12);
-		align(wataText);
-		
-		RenderedTextBlock wataLink = renderTextBlock( LNK_WATA, 8 );
-		wataLink.maxWidth((int)Math.min(colWidth, 120));
-		wataLink.hardlight(Window.TITLE_COLOR);
-		add(wataLink);
-		
-		wataLink.setPos(wataOffset + (colWidth - wataLink.width()) / 2 , wataText.bottom() + 6);
-		align(wataLink);
-		
-		PointerArea hotArea = new PointerArea( wataLink.left(), wataLink.top(), wataLink.width(), wataLink.height() ) {
-			@Override
-			protected void onClick( PointerEvent event ) {
-				DeviceCompat.openURI( "https://" + LNK_WATA );
-			}
-		};
-		add( hotArea );
 
 		
 		Archs archs = new Archs();
 		archs.setSize( Camera.main.width, Camera.main.height );
 		addToBack( archs );
-
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
 		add( btnExit );
