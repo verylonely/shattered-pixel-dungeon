@@ -177,6 +177,24 @@ public class AboutScene extends PixelScene {
 		align( watatitle );
 
 
+		PointerArea hotAreaWata = new PointerArea( watatitle.left(), watatitle.top(), watatitle.width(), watatitle.height() ){
+			@Override
+			protected void onClick( PointerEvent e ){
+				DeviceCompat.openURI("http://" + LNK_WATA);
+			}
+		};
+
+
+		PointerArea hotAreaSpd = new PointerArea( shpxtitle.left(), shpxtitle.top(), shpxtitle.width(), shpxtitle.height() ){
+			@Override
+			protected void onClick( PointerEvent e ){
+				DeviceCompat.openURI("https://" + LNK_SHPX);
+			}
+		};
+
+		add(hotAreaWata);
+		add(hotAreaSpd);
+
 
 		//------------------------------------------------------------------------------------------
 
