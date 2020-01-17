@@ -71,7 +71,7 @@ public class PrisonLevel extends RegularLevel {
 	@Override
 	protected int specialRooms() {
 		//1 to 3, average 1.83
-		return 1+Random.NormalIntRange(1, 4);
+		return 2+Random.NormalIntRange(1, 3);
 	}
 	
 	@Override

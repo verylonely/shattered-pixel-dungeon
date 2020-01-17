@@ -71,7 +71,7 @@ public class CavesLevel extends RegularLevel {
 	
 	@Override
 	protected int specialRooms() {
-		return 4+Random.NormalIntRange(1, 4);
+		return 3+Random.NormalIntRange(1, 2);
 	}
 	
 	@Override

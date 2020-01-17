@@ -63,7 +63,7 @@ public class CityLevel extends RegularLevel {
 	
 	@Override
 	protected int specialRooms() {
-		return 2+Random.NormalIntRange(1, 4);
+		return 2+Random.NormalIntRange(1, 3);
 	}
 	
 	@Override

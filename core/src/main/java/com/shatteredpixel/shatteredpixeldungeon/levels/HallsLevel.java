@@ -69,7 +69,7 @@ public class HallsLevel extends RegularLevel {
 	
 	@Override
 	protected int specialRooms() {
-		return 4+Random.NormalIntRange(1, 3);
+		return 2+Random.NormalIntRange(1, 3);
 	}
 	
 	@Override
