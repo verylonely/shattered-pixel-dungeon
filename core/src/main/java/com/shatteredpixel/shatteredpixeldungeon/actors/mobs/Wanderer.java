@@ -17,6 +17,7 @@ import com.watabou.utils.Random;
 public class Wanderer extends Mob {
 
     {
+        state = WANDERING;
         alignment = Alignment.NEUTRAL;
         spriteClass = WandererSprite.class;
         HP = HT = 10;
@@ -64,10 +65,10 @@ public class Wanderer extends Mob {
         super.die( cause );
     }
 
-    private int dice = Random.NormalIntRange(1, 10);
+    private int dice = Random.NormalIntRange(1, 5);
 
     public void makeGhost(int pos){
-        if(dice == 10){
+        if(dice == 1){
             ghost = new WandererGhost();
             summoningPos = pos;
             ghost.pos = summoningPos;
