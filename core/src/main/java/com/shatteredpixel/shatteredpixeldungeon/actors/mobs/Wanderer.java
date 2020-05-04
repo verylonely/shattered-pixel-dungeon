@@ -5,7 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.StrongKunai;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -22,7 +22,7 @@ public class Wanderer extends Mob {
         spriteClass = WandererSprite.class;
         HP = HT = 10;
 
-        loot = Generator.Category.WEP_T1;
+        loot = StrongKunai.class;
         lootChance = 0.25f;
 
         maxLvl = 5;
