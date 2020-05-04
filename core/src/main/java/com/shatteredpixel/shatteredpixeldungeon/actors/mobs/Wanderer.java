@@ -61,13 +61,13 @@ public class Wanderer extends Mob {
             GLog.i( Messages.get(this, "died") );
         }
 
-        makeGhost(pos);
+        int dice = Random.Int(5);
+        makeGhost(pos, dice);
         super.die( cause );
     }
 
-    private int dice = Random.NormalIntRange(1, 5);
 
-    public void makeGhost(int pos){
+    public void makeGhost(int pos, int dice){
         if(dice == 1){
             ghost = new WandererGhost();
             summoningPos = pos;
