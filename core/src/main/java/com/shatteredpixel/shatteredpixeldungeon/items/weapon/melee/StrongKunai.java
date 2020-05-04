@@ -7,7 +7,7 @@ public class StrongKunai extends MeleeWeapon {
     {
         image = ItemSpriteSheet.KUNAI;
 
-        tier = 4;
+        tier = 2;
         ACC = 0.25f;
 
     }
