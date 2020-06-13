@@ -1,13 +1,13 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.RatSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.RatStrongSprite;
 import com.watabou.utils.Random;
 
 public class RatStrong extends Mob {
 
     {
-        spriteClass = RatSprite.class;
+        spriteClass = RatStrongSprite.class;
 
         HP = HT = 12;
         defenseSkill = 3;
