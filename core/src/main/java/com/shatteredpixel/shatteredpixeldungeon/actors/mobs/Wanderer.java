@@ -67,7 +67,7 @@ public class Wanderer extends Mob {
     }
 
 
-    public void makeGhost(int pos, int dice){
+    private void makeGhost(int pos, int dice){
         if(dice == 1){
             ghost = new WandererGhost();
             summoningPos = pos;
