@@ -189,6 +189,8 @@ public class Bestiary {
 			// Sewers
 			default:
 				return;
+			case 2:
+				if(Random.Float() <= 0.025f) rotation.add(WandererGhost.class);
 			case 4:
 				if (Random.Float() < 0.025f) rotation.add(Thief.class);
 				return;
