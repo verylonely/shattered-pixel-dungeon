@@ -18,7 +18,7 @@ allprojects {
         appVersionName = '0.8.1-d'
 
         appAndroidCompileSDK = 29
-        appAndroidMinSDK = 9
+        appAndroidMinSDK = 16
         appAndroidTargetSDK = 29
 
         gdxVersion = '1.9.10'

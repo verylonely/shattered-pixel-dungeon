@@ -81,13 +81,15 @@ public class Bestiary {
 				//3x skeleton, 1x thief, 1x swarm
 				return new ArrayList<>(Arrays.asList(Skeleton.class, Skeleton.class, Skeleton.class,
 						Thief.class,
-						Swarm.class));
+						Swarm.class,
+						RoomlessHard.class));
 			case 7:
 				//3x skeleton, 1x thief, 1x shaman, 1x guard
 				return new ArrayList<>(Arrays.asList(Skeleton.class, Skeleton.class, Skeleton.class,
 						Thief.class,
 						Shaman.class,
-						Guard.class));
+						Guard.class,
+						RoomlessHard.class));
 			case 8:
 				//2x skeleton, 1x thief, 2x shaman, 2x guard, 1x necromancer
 				return new ArrayList<>(Arrays.asList(Skeleton.class, Skeleton.class,
@@ -95,14 +97,16 @@ public class Bestiary {
 						Zombie.class,
 						Shaman.class, Shaman.class,
 						Guard.class, Guard.class,
-						Necromancer.class));
+						Necromancer.class,
+						RoomlessHard.class));
 			case 9: case 10:
 				//1x skeleton, 1x thief, 2x shaman, 2x guard, 2x necromancer
 				return new ArrayList<>(Arrays.asList(Skeleton.class,
 						Thief.class,
 						Shaman.class, Shaman.class,
 						Guard.class, Guard.class,
-						Necromancer.class, Necromancer.class));
+						Necromancer.class, Necromancer.class,
+						RoomlessHard.class));
 				
 			// Caves
 			case 11:
@@ -190,7 +194,7 @@ public class Bestiary {
 			default:
 				return;
 			case 2:
-				if(Random.Float() <= 0.025f) rotation.add(WandererGhost.class);
+				if (Random.Float() < 0.025f) rotation.add(RoomlessHard.class);
 			case 4:
 				if (Random.Float() < 0.025f) rotation.add(Thief.class);
 				return;
