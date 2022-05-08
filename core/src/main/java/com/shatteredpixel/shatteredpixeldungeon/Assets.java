@@ -107,6 +107,7 @@ public class Assets {
 	public static final String NECRO	= "necromancer.png";
 	public static final String WANDERER = "wanderer.png";
 	public static final String ZOMBIE 	= "zombie.png";
+	public static final String WISP		= "wisp.png";
 
 	public static final String ITEMS	        = "items_gloomy.png";
 	public static final String ITEMS_GLOOMY 	= "items_gloomy.png";
